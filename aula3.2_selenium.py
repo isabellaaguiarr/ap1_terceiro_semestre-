@@ -90,7 +90,7 @@ while True:
         imovel['metragem'] = elem.find_element(By.CLASS_NAME, "new-details-ul").text
         imovel['preco'] = elem.find_element(By.CLASS_NAME, "new-price").text
         imovel['quartos'] = elem.find_element(By.CLASS_NAME, "new-details-ul").text
-        imovel['decricao'] = elem.find_element(By.CLASS_NAME, "new-simple").text
+        imovel['descricao'] = elem.find_element(By.CLASS_NAME, "new-simple").text
         lst_imoveis.append(imovel)
 
     # Botao "Proxima"
@@ -110,7 +110,7 @@ df = pd.DataFrame(lst_imoveis)
 # Tratando os dados:  
 # 1. letras minusculas 
 df['localizacao'] = df["localizacao"].str.lower()
-df['decricao'] = df["decricao"].str.lower()
+df['descricao'] = df["descricao"].str.lower()
 
 # 2. aparecer apenas a metragem ( uso de regex )
 df['metragem'] = df['metragem'].str.extract(r'(\d+)[^a-zA-Z]*')   
