@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Streamlit: Debug App",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "aula2_front.py",                         // Substitua pelo nome do seu script
+                "--server.address", "127.0.0.1",    // Faz o app escutar no endereço local
+                "--server.port", "8501"             // Porta que você deseja usar
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
